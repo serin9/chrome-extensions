@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+	"name": "Tab",
+	"version": "1.0",
+	"description": "Shows a 'New Tab' page",
+	"homepage_url": "https://github.com/serin9/chrome-extensions/tab",
+	"icons": {
+		"32": "icon_32.png",
+		"128": "icon_128.png"
+	},
+  "browser_action": {
+    "default_title": "Tab"
+  },
+	"chrome_url_overrides": {
+		"newtab": "tab.html"
+	}
+}
