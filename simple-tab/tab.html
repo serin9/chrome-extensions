@@ -8,20 +8,53 @@
         height: 100%;
       }
       body {
+        background-color: black;
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 5rem;
+        color: white;
         text-align: center;
-      	padding: 100px;
       }
       .content {
-
+      }
+      div {
+        padding: 10px;
+      }
+      .message {
+        font-size: 4rem;
+      }
+      #naver input {
+        border: 3px solid green;
+        width: 50%;
+      }
+      .btn {
+      }
+      #google input {
+        border: 3px solid red;
+        width: 50%;
+      }
+      .footer {
+        font-size: 2rem;
       }
     </style>
     <script defer src="tab.js"></script>
   </head>
   <body>
   	<div class="content">
-  		<span class="message"> </span>
+  		<div class="message"> </div>
+      <div class="search">
+        <div id="naver">
+          <input type="text" class="search_window" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="btn search-btn" type="button">Search</button>
+          </span>
+        </div>
+        <div id="google">
+          <input type="text" class="search_window" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="btn search-btn" type="button">Search</button>
+          </span>
+        </div>
+      </div>
+  		<div class="links"> </div>
   	</div>
   	<div class="footer"> </div>
   </body>
