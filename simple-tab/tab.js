@@ -1,18 +1,20 @@
 var locale = 'de-DE';
 var content = {
-	msg: document.querySelector('.content .message').firstChild,
-  //search: document.querySelector('.content .search').firstChild,
-  links: document.querySelector('.content .links').firstChild,
+	msg: document.querySelector('.content .message').firstChild
 };
 var search_content = {
   naver_input: document.getElementById("naver_search_input"),
   naver_btn: document.getElementById("naver_search_btn"),
   google_input: document.getElementById("google_search_input"),
   google_btn: document.getElementById("google_search_btn")
-}
+};
+var links = {
+  oss_btn: document.getElementById("oss"),
+  connect_btn: document.getElementById("connect")
+};
 var footer = {
   date: document.querySelector('.footer').firstChild
-}
+};
 render();
 
 function render() {
@@ -55,5 +57,12 @@ function setEventListener() {
   });
   search_content.google_btn.addEventListener("click", function() {
     search("google", search_content.google_input.value)
+  });
+
+  links.oss_btn.addEventListener("click", function() {
+    window.location.href = "https://oss.navercorp.com";
+  });
+  links.connect_btn.addEventListener("click", function() {
+    window.location.href = "https://connect.navercorp.com/home";
   });
 }

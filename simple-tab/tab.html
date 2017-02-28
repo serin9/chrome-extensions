@@ -8,12 +8,8 @@
         height: 100%;
       }
       body {
-        background-color: black;
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        color: white;
         text-align: center;
-      }
-      .content {
       }
       div {
         padding: 10px;
@@ -23,38 +19,36 @@
       }
       #naver input {
         border: 3px solid green;
-        width: 50%;
-      }
-      .btn {
       }
       #google input {
         border: 3px solid red;
-        width: 50%;
       }
       .footer {
         font-size: 2rem;
       }
     </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script defer src="tab.js"></script>
   </head>
   <body>
   	<div class="content">
   		<div id="msg" class="message"> </div>
-      <div class="search">
-        <div id="naver">
-          <input type="text" id="naver_search_input" class="search_input" placeholder="Search for...">
-          <span class="input-group-btn">
-            <button id="naver_search_btn" class="btn search-btn" type="button">Search</button>
-          </span>
+      <form id="search" class="form-inline">
+        <div id="naver" class="form-group">
+          <input type="text" id="naver_search_input" class="form-control" placeholder="Search for...">
+          <button id="naver_search_btn" class="btn btn-default" type="button">Search</button>
         </div>
-        <div id="google">
-          <input type="text" id="google_search_input" class="search_input" placeholder="Search for...">
-          <span class="input-group-btn">
-            <button id="google_search_btn" class="btn search-btn" type="button">Search</button>
-          </span>
+        <div id="google" class="form-group">
+          <input type="text" id="google_search_input" class="form-control" placeholder="Search for...">
+          <button id="google_search_btn" class="btn btn-default" type="button">Search</button>
         </div>
+      </form>
+      <div id="links" class="row">
+          <button id="oss" class="btn btn-default col-sm-2" type="button">OSS</button>
+          <button id="connect" class="btn btn-default col-sm-2" type="button">connect</button>
       </div>
-  		<div class="links"> </div>
   	</div>
   	<div class="footer"> </div>
   </body>
