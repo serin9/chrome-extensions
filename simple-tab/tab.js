@@ -27,8 +27,6 @@ function padZero(number) {
 }
 
 function render() {
-	content.msg.data = "\"Time to study\"";
-
   var now = new Date();
   var hours = now.getHours();
   var minutes = now.getMinutes();
@@ -41,9 +39,29 @@ function render() {
     year: 'numeric'
   });
 
+  setMsg(hours)
   setTimeout(render, (60 - seconds) * 1000);
 
   setEventListener();
+}
+
+function setMsg(hours) {
+  var msg;
+  if (hours < 10) {
+    msg = "\"Time to Plan\"";
+  } else if (hours > 10 && hours < 12) {
+    msg = "\"Time to Read\"";
+  } else if (hours > 12 && hours < 18) {
+    msg = "\"Time to Work\"";
+  } else if (hours > 18 && hours < 19) {
+    msg = "\"Time to Write\"";
+  } else if (hours > 19 && hours < 22) {
+    msg = "\"Time to Study\"";
+  } else if (hours > 19 && hours < 22) {
+    msg = "\"Time to Play\"";
+  }
+
+	content.msg.data = msg;
 }
 
 function search(engine, query) {
