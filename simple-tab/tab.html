@@ -14,8 +14,11 @@
       div {
         padding: 10px;
       }
-      .message {
+      .time {
         font-size: 4rem;
+      }
+      .message {
+        font-size: 3rem;
       }
       #naver input {
         border: 3px solid green;
@@ -34,6 +37,9 @@
   </head>
   <body>
   	<div class="content">
+      <div class="time">
+        <span id="time_hour"></span>:<span id="time_minute"></span>
+      </div>
   		<div id="msg" class="message"> </div>
       <form id="search" class="form-inline">
         <div id="naver" class="form-group">

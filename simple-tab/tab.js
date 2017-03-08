@@ -1,6 +1,10 @@
-var locale = 'de-DE';
+var locale = 'en-EN';
 var content = {
 	msg: document.querySelector('.content .message').firstChild
+};
+var time = {
+  hour: document.getElementById("time_hour"),
+  minute: document.getElementById("time_minute")
 };
 var search_content = {
   naver_input: document.getElementById("naver_search_input"),
@@ -17,11 +21,20 @@ var footer = {
 };
 render();
 
+function padZero(number) {
+  var str = number.toString();
+  return str.length < 2? '0' + str : str;
+}
+
 function render() {
-	content.msg.data = "new tab";
+	content.msg.data = "\"Time to study\"";
 
   var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
   var seconds = now.getSeconds();
+  time.hour.innerHTML = padZero(hours);
+  time.minute.innerHTML = padZero(minutes);
   footer.date.data = now.toLocaleString(locale, {
     day: 'numeric',
     month: 'long',
