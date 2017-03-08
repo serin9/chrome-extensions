@@ -57,7 +57,7 @@ function setMsg(hours) {
     msg = "\"Time to Write\"";
   } else if (hours > 19 && hours < 22) {
     msg = "\"Time to Study\"";
-  } else if (hours > 19 && hours < 22) {
+  } else if (hours > 19 && hours < 24) {
     msg = "\"Time to Play\"";
   }
 
